@@ -7,8 +7,11 @@ from .models import Course, Student
 
 ns = Namespace("api")
 
+#Route
 @ns.route("/hello")
+#Random name for the class
 class Hello(Resource):
+    
     def get(self):
         return {"hello": "restx"}
 
@@ -30,7 +33,6 @@ class CourseListAPI(Resource):
         db.session.add(course)
         db.session.commit()
         return course, 201
-
 
 @ns.route("/courses/<int:id>")
 class CourseAPI(Resource):
