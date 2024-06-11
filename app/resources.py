@@ -15,8 +15,6 @@ class Hello(Resource):
     def get(self):
         return {"hello": "restx"}
 
-
-
 @ns.route("/courses")
 class CourseListAPI(Resource):
     #Get the full JSON of students from the db
